@@ -1,6 +1,4 @@
-declare const API_URL: string;
-
 export const environment = {
   production: true,
-  apiUrl: API_URL
+  apiUrl: 'http://localhost:3000' // or your backend URL
 };
