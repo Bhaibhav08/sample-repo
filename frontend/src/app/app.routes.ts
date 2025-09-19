@@ -4,7 +4,7 @@ import { SignupComponent } from './signup/signup.component';
 // import { ProductListComponent } from './product-list/product-list.component';
  
 export const routes: Routes = [
-    {path:'',redirectTo:'/signup',pathMatch:'full'},
+    
   { path: 'signup', component: SignupComponent },
 //   { path: 'login', component: LoginComponent },
 //   { path: 'products', component: ProductListComponent },
