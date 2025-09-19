@@ -9,9 +9,13 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
-    steps:  
+    steps:
       - name: Deploy Backend Service
-        run: curl -v -X POST ${{ secrets.RENDER_BACKEND_DEPLOY_HOOK }}
+        run: |
+          echo "Triggering backend deploy..."
+          curl -s -o /dev/null -w "%{http_code}" -X POST ${{ secrets.RENDER_BACKEND_DEPLOY_HOOK }}
 
       - name: Deploy Frontend Service
-        run: curl -v -X POST ${{ secrets.RENDER_FRONTEND_DEPLOY_HOOK }}
+        run: |
+          echo "Triggering frontend deploy..."
+          curl -s -o /dev/null -w "%{http_code}" -X POST ${{ secrets.RENDER_FRONTEND_DEPLOY_HOOK }}
