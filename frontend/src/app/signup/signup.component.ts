@@ -16,7 +16,6 @@ export class SignupComponent {
   password = '';
   message = '';
 
-  // ✅ Use environment config
   private apiUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) {}
